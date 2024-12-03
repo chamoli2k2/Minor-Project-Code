@@ -60,11 +60,18 @@ import os
 # PSO = [7.6326, 7.2841, 7.6252, 7.6257]  # Replace with your values
 
 # Values for each parameter and algorithm (Barbara Entropy)
+# parameters = ["Logistic", "Sine", "Gauss", "Circle"]
+# GA = [7.6294, 7.7341, 7.7150, 7.7582]  # Replace with your values
+# MFO = [7.9430, 7.7636, 7.9946, 7.9310]  # Replace with your values
+# GWO = [7.8789, 7.8560, 7.6880, 7.9321]  # Replace with your values
+# PSO = [7.9993, 7.9995, 7.9993, 7.9993]  # Replace with your values
+
+# Values for each parameter and algorithm (Barbara Entropy)
 parameters = ["Logistic", "Sine", "Gauss", "Circle"]
-GA = [7.6294, 7.7341, 7.7150, 7.7582]  # Replace with your values
-MFO = [7.9430, 7.7636, 7.9946, 7.9310]  # Replace with your values
-GWO = [7.8789, 7.8560, 7.6880, 7.9321]  # Replace with your values
-PSO = [7.9993, 7.9995, 7.9993, 7.9993]  # Replace with your values
+UACI = [33.4521, 32.7341, 29.7150, 34.7582]  # Replace with your values
+NPCR = [99.9430, 97.7636, 98.9946, 97.9310]  # Replace with your values
+ENTROPY = [6.8789, 7.9560, 8.6880, 6.9321]  # Replace with your values
+
 
 # Bar width and positions
 bar_width = 0.2
@@ -76,22 +83,21 @@ os.makedirs(output_folder, exist_ok=True)
 
 # Create the bar chart
 plt.figure(figsize=(10, 6))  # Adjust figure size
-plt.bar(x - 1.5 * bar_width, GA, width=bar_width, label="GA", color="blue")
-plt.bar(x - 0.5 * bar_width, MFO, width=bar_width, label="MFO", color="red")
-plt.bar(x + 0.5 * bar_width, GWO, width=bar_width, label="GWO", color="orange")
-plt.bar(x + 1.5 * bar_width, PSO, width=bar_width, label="PSO", color="green")
+plt.bar(x - 1.5 * bar_width, UACI, width=bar_width, label="UACI", color="blue")
+plt.bar(x - 0.5 * bar_width, NPCR, width=bar_width, label="NPCR", color="red")
+plt.bar(x + 0.5 * bar_width, ENTROPY, width=bar_width, label="ENTROPY", color="orange")
 
 # Labels and legend
 plt.xlabel("Parameters", fontsize=12)
-plt.ylabel("ENTROPY", fontsize=12)
-plt.title("Entropy - Barbara Image Encryption", fontsize=14)
+plt.ylabel("Hybrid", fontsize=12)
+plt.title("Hybrid Algo - Barbara Image Encryption", fontsize=14)
 plt.xticks(x, parameters, fontsize=10)
 plt.yticks(fontsize=10)
 plt.legend(fontsize=10)
 plt.tight_layout()  # Ensure everything fits without overlap
 
 # Save the plot
-output_path = os.path.join(output_folder, "entropy_barbara_image_encryption.png")
+output_path = os.path.join(output_folder, "hybrid_barbara_image_encryption.png")
 plt.savefig(output_path, dpi=300)  # Save with high resolution
 print(f"Plot saved at: {output_path}")
 

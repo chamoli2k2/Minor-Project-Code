@@ -63,9 +63,9 @@ if __name__ == "__main__":
         "/home/chamoli/Desktop/minor project/CODE/dataset/barbara.jpg",
     ]
     encrypted_image_paths = [
-        "/home/chamoli/Desktop/minor project/CODE/mfoImages/encrypted_lena.png",
-        "/home/chamoli/Desktop/minor project/CODE/mfoImages/encrypted_cameraman.png",
-        "/home/chamoli/Desktop/minor project/CODE/mfoImages/encrypted_barbara.png",
+        "/home/chamoli/Desktop/minor project/CODE/hybridImages/encrypted_lena.png",
+        "/home/chamoli/Desktop/minor project/CODE/hybridImages/encrypted_cameraman.png",
+        "/home/chamoli/Desktop/minor project/CODE/hybridImages/encrypted_barbara.png",
     ]
 
     # Process images and calculate metrics

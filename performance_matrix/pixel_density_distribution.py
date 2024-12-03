@@ -46,13 +46,13 @@ def plot_histogram_comparison(original, encrypted):
     
     # Save the plot
     os.makedirs("histogramPlots", exist_ok=True)
-    plt.savefig("histogramPlots/histogram_comparison_barbara.png")
+    plt.savefig("histogramPlots/histogram_comparison_cameraman_hybrid.png")
     plt.close()
 
 if __name__ == "__main__":
     # Load the original and encrypted images
-    original_image = cv2.imread("/home/chamoli/Desktop/minor project/CODE/dataset/barbara.jpg", cv2.IMREAD_GRAYSCALE)
-    encrypted_image = cv2.imread("/home/chamoli/Desktop/minor project/CODE/psoImages/encrypted_barbara.png", cv2.IMREAD_GRAYSCALE)
+    original_image = cv2.imread("/home/chamoli/Desktop/minor project/CODE/dataset/cameraman.jpg", cv2.IMREAD_GRAYSCALE)
+    encrypted_image = cv2.imread("/home/chamoli/Desktop/minor project/CODE/hybridImages/encrypted_camerman.png", cv2.IMREAD_GRAYSCALE)
 
     if original_image is None or encrypted_image is None:
         raise FileNotFoundError("One or both images not found. Check the file paths.")
